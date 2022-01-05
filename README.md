@@ -12,3 +12,11 @@ It then connects to Websockets **wss://rpc.thorchain.info/websocket** and receiv
 Pressing 'Reconnect' will reload all of the above connections.  
 
 App is not Notarised but does use Xcode sandbox features for Incoming/Outgoing network connection (required for WebSockets).  
+
+### Build Instructions (Xcode)
+
+Open project in Xcode.  
+Choose *Product* > *Archive*.  
+Choose app in list that appears and press *Distribute app*.  
+Choose *Copy app* and choose a destination, e.g. Desktop.  
+Open folder just saved and right click on binary and choose 'Open'.  
