@@ -44,7 +44,7 @@ final class Model : ObservableObject {
             if let data = data,
                 let json = String(data: data, encoding: .utf8),
                 let dict = json.convertToDictionary(),
-               let churnInterval = dict["mimir//CHURNINTERVAL"] as? Int {
+               let churnInterval = dict["CHURNINTERVAL"] as? Int {
                 
                 DispatchQueue.main.async {
                     self.churnInterval = churnInterval
