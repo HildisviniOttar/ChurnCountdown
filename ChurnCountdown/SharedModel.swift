@@ -38,7 +38,7 @@ final class Model : ObservableObject {
     
     /// Load mimir for CHURNINTERVAL
     private func loadChurnInterval() {
-        let url = URL(string: "https://midgard.thorchain.info/v2/thorchain/mimir")!
+        let url = URL(string: "https://midgard.ninerealms.com/v2/thorchain/mimir")!
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, data != nil else { return }
             if let data = data,
@@ -59,7 +59,7 @@ final class Model : ObservableObject {
     
     /// Load nextChurnHeight from network
     private func loadNextChurnHeight() {
-        let url = URL(string: "https://midgard.thorchain.info/v2/network")!
+        let url = URL(string: "https://midgard.ninerealms.com/v2/network")!
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil, data != nil else { return }
             if let data = data,
@@ -80,7 +80,7 @@ final class Model : ObservableObject {
     
     /// Connect to Websocket rpc endpoint and receive block updates
     private func connectWebsocket() {
-        let url = URL(string: "wss://rpc.thorchain.info/websocket")!
+        let url = URL(string: "wss://rpc.ninerealms.com/websocket")!
         self.websocketTask = URLSession.shared.webSocketTask(with: url)
         self.addListener()
         // Send request to listen for new blocks
